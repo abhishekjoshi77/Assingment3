@@ -1,0 +1,18 @@
+function miqueString(strings) {
+  return strings.reduce((acc, string) => {
+    acc[string] = (acc[string] || 0) + 1; // Increment the count if the string exists, else initialize it to 1
+    return acc;
+  }, {}); // Initial accumulator is an empty object
+}
+
+const strings = [
+  "apple",
+  "banana",
+  "apple",
+  "orange",
+  "banana",
+  "pear",
+  "apple",
+];
+
+console.log(miqueString(strings));
